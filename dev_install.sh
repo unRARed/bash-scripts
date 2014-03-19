@@ -6,7 +6,9 @@ sudo apt-get install python-software-properties curl -y
 
 # Setup Git
 git config --global user.email "ryananthonyrichardson@gmail.com" 
-git config --global user.name "Ryan Richardson" 
+git config --global user.name "Ryan Richardson"
+git config --global color.ui true
+git config --global alias.history "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # NVM: node-version manager and node
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
@@ -20,13 +22,13 @@ nvm alias default 0.10
 sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
 curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
-echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc
+echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc # this doesn't always work
 rvm install 2.1.0
 rvm use 2.1.0 --default
 
 # Heroku Toolbelt
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
-# Sublime Text 2
-sudo add-apt-repository ppa:webupd8team/sublime-text-2
-sudo apt-get update && sudo apt-get install sublime-text
+# Sublime Text 3
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update && sudo apt-get install sublime-text-installer
