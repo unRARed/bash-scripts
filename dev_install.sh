@@ -11,7 +11,7 @@ git config --global color.ui true
 git config --global alias.history "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # NVM: node-version manager and node
-curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+curl https://raw.githubusercontent.com/creationix/nvm/v0.5.1/install.sh | sh
 source ~/.nvm/nvm.sh
 echo "source ~/.nvm/nvm.sh" >> ~/.bashrc
 nvm install v0.10.26
