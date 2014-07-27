@@ -14,6 +14,7 @@ git config --global alias.history "log --color --graph --pretty=format:'%Cred%h%
 curl https://raw.githubusercontent.com/creationix/nvm/v0.5.1/install.sh | sh
 echo "export NVM_DIR=~/.nvm" >> ~/.bashrc
 echo "source ~/.nvm/nvm.sh" >> ~/.bashrc
+source ~/.nvm/nvm.sh
 nvm install v0.11.13
 nvm use v0.11.13
 nvm alias default 0.11
