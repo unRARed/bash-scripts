@@ -4,6 +4,9 @@
 # Dependencies 
 sudo apt-get install python-software-properties curl -y
 
+# Main Dev Libraries
+sudo apt-get install build-essential
+
 # Setup Git
 git config --global user.email "ryananthonyrichardson@gmail.com" 
 git config --global user.name "Ryan Richardson"
@@ -15,9 +18,9 @@ curl https://raw.githubusercontent.com/creationix/nvm/v0.5.1/install.sh | sh
 echo "export NVM_DIR=~/.nvm" >> ~/.bashrc
 echo "source ~/.nvm/nvm.sh" >> ~/.bashrc
 source ~/.nvm/nvm.sh
-nvm install v0.11.13
-nvm use v0.11.13
-nvm alias default 0.11
+nvm install v0.10.29
+nvm use v0.10.29
+nvm alias default 0.10
 
 # RVM: ruby-version manager, ruby and rails
 sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
