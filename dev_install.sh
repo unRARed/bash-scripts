@@ -37,3 +37,4 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 # Sublime Text 3
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
 sudo apt-get update && sudo apt-get install sublime-text-installer
+git config --global core.editor "subl -n -w"
