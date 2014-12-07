@@ -1,14 +1,14 @@
 #!/bin/bash
 # Ubuntu 14.04 for nodeJS and Ruby development.
 
-# Dependencies 
+# Dependencies
 sudo apt-get install python-software-properties curl -y
 
 # Main Dev Libraries
 sudo apt-get install build-essential
 
 # Setup Git
-git config --global user.email "ryananthonyrichardson@gmail.com" 
+git config --global user.email "ryananthonyrichardson@gmail.com"
 git config --global user.name "Ryan Richardson"
 git config --global color.ui true
 git config --global alias.history "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
@@ -24,6 +24,7 @@ nvm alias default 0.10
 
 # RVM: ruby-version manager, ruby and rails
 sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
+gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc # this doesn't always work
