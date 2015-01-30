@@ -7,7 +7,8 @@ sudo apt-get install curl -y
 # Main Dev Libraries
 sudo apt-get install build-essential
 
-# Setup Git
+# Git
+sudo apt-get install git
 git config --global user.email "ryananthonyrichardson@gmail.com"
 git config --global user.name "Ryan Richardson"
 git config --global color.ui true
