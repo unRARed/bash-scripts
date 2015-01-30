@@ -14,8 +14,8 @@ sudo apt-get install build-essential
 
 # Git
 sudo apt-get install git
-git config --global user.email "ryananthonyrichardson@gmail.com"
-git config --global user.name "Ryan Richardson"
+git config --global user.email "epwashkow@gmail.com"
+git config --global user.name "EvanWashkow"
 git config --global color.ui true
 git config --global alias.history "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
