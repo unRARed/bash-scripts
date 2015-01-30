@@ -2,7 +2,7 @@
 # Ubuntu 14.04 for nodeJS and Ruby development.
 
 # Dependencies
-sudo apt-get install python-software-properties curl -y
+sudo apt-get install curl -y
 
 # Main Dev Libraries
 sudo apt-get install build-essential
