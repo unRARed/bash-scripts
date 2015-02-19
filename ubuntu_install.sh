@@ -1,6 +1,18 @@
 #!/bin/bash
 # Ubuntu 14.10 for development.
 
+# Prompt user for installation information
+while [ -z "$GIT_EMAIL" ]
+do
+	read -p "Git Email: " email
+	case $email in
+		*[@]* ) GIT_EMAIL=$email;;
+		* ) echo "Please enter a valid email address.";;
+	esac
+done
+
+read -p "Git User Name: " GIT_USER_NAME
+
 # Repositories
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
 sudo apt-add-repository ppa:paolorotolo/android-studio
@@ -14,8 +26,8 @@ sudo apt-get install build-essential
 
 # Git
 sudo apt-get install git
-git config --global user.email "ryananthonyrichardson@gmail.com"
-git config --global user.name "Ryan Richardson"
+git config --global user.email $GIT_EMAIL
+git config --global user.name $GIT_USER_NAME
 git config --global color.ui true
 git config --global alias.hist "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global core.editor "subl -n -w"
