@@ -18,6 +18,11 @@ echo "gem: --no-document" >> ~/.gemrc
 
 curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
 
+# Node Version Manager
+curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash
+source ~/.bashrc
+nvm install 0.12.0 # should 'use' by default
+
 brew install postgresql
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
