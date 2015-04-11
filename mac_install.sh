@@ -7,7 +7,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew doctor
 
 # Git and bash/git completion
-brew install gitbrew bash-completion
+brew install git bash-completion # Note, the OSX pre-installed Git will not work with bash-completion
 git config --global user.name "Ryan Richardson"
 git config --global user.email "ryananthonyrichardson@gmail.com"
 git config --global color.ui true
