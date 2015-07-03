@@ -15,7 +15,6 @@ read -p "Git User Name: " GIT_USER_NAME
 
 # Repositories
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
-sudo apt-add-repository ppa:paolorotolo/android-studio
 sudo apt-get update
 
 # Dependencies
@@ -49,9 +48,6 @@ source ~/.rvm/scripts/rvm
 echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc # this doesn't always work
 rvm install 2.1.2
 rvm use 2.1.2 --default
-
-# Android Studio
-sudo apt-get install android-studio
 
 # Heroku Toolbelt
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
