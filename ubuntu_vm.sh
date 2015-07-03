@@ -71,6 +71,11 @@ echo "<VirtualHost *:80>
 	DocumentRoot /var/www/html/$share_name
 	ErrorLog ${APACHE_LOG_DIR}/error.log
 	CustomLog ${APACHE_LOG_DIR}/access.log combined
+	<Directory /var/www/html/$share_name>
+		allow from all
+		order allow,deny
+		AllowOverride All
+	</Directory>
 </VirtualHost>" | sudo tee --append /etc/apache2/sites-available/$host_name.conf
 sudo mount -a
 
