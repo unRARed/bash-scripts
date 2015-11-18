@@ -27,8 +27,8 @@ curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --
 # Node Version Manager
 curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash
 source ~/.bashrc
-nvm install 0.12.0
-nvm alias default v0.12
+nvm install 0.12.7
+nvm alias default v0.12.7
 
 # Postrgresql Database (for Rails on Heroku)
 brew install postgresql
