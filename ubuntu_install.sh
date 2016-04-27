@@ -1,5 +1,5 @@
 #!/bin/bash
-# Ubuntu 14.10 for development.
+# Ubuntu 16.04 for development.
 
 # Prompt user for installation information
 while [ -z "$GIT_EMAIL" ]
@@ -46,11 +46,15 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc # this doesn't always work
-rvm install 2.1.2
-rvm use 2.1.2 --default
+rvm install 2.2.4
+rvm use 2.2.4 --default
 
 # Heroku Toolbelt
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+# Postgres
+sudo apt-get install postgresql postgresql-contrib libpq-dev # libpq-dev needed for Ruby PG Gem
+sudo -u postgres createuser --superuser $USER #adds current user to PG
 
 # Sublime Text 3
 sudo apt-get install sublime-text-installer
