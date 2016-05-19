@@ -12,7 +12,6 @@ git config --global user.name "Ryan Richardson"
 git config --global user.email "ryananthonyrichardson@gmail.com"
 git config --global color.ui true
 git config --global alias.hist "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-git config --global core.editor "subl -n -w"
 echo -e "if [ -f `brew --prefix`/etc/bash_completion ]; then\n    . `brew --prefix`/etc/bash_completion\nfi" >> ~/.bash_profile
 
 # git-aware bash prompt
@@ -36,8 +35,5 @@ nvm alias default v0.12.7
 brew install postgresql
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
-
-# Assumes prior installation of Sublime Text 3
-ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 source ~/.bash_profile
