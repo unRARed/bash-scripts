@@ -13,8 +13,6 @@ done
 
 read -p "Git User Name: " GIT_USER_NAME
 
-# Repositories
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
 sudo apt-get update
 
 # Dependencies
@@ -46,8 +44,8 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc # this doesn't always work
-rvm install 2.2.4
-rvm use 2.2.4 --default
+rvm install 2.3.1
+rvm use 2.3.1 --default
 
 # Heroku Toolbelt
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
@@ -55,7 +53,3 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 # Postgres
 sudo apt-get install postgresql postgresql-contrib libpq-dev # libpq-dev needed for Ruby PG Gem
 sudo -u postgres createuser --superuser $USER #adds current user to PG
-
-# Sublime Text 3
-sudo apt-get install sublime-text-installer
-
