@@ -22,14 +22,14 @@ echo -e "if [ -f \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\" ]; 
 # Ruby on Rails
 echo "gem: --no-document" >> ~/.gemrc
 curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
-rvm install 2.2.4
-rvm use 2.2.4 --default
+rvm install 2.3.1
+rvm use 2.3.1 --default
 
 # Node Version Manager
 curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash
 source ~/.bashrc
-nvm install 0.12.7
-nvm alias default v0.12.7
+nvm install 4.5.0
+nvm alias default v4.5.0
 
 # Postrgresql Database (for Rails on Heroku)
 brew install postgresql
