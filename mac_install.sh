@@ -36,4 +36,8 @@ brew install postgresql
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
+brew cask install sublime-text
+
 source ~/.bash_profile
