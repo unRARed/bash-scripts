@@ -34,18 +34,19 @@ curl https://raw.githubusercontent.com/creationix/nvm/v0.5.1/install.sh | sh
 echo "export NVM_DIR=~/.nvm" >> ~/.bashrc
 echo "source ~/.nvm/nvm.sh" >> ~/.bashrc
 source ~/.nvm/nvm.sh
-nvm install v0.10.29
-nvm use v0.10.29
-nvm alias default 0.10
+nvm install v7.3.0
+nvm use v7.3.0
+nvm alias default 7.3.0
 
-# RVM: ruby-version manager, ruby and rails
+# RVM: ruby-version manager
 sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
 gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc # this doesn't always work
-rvm install 2.3.1
-rvm use 2.3.1 --default
+rvm install 2.3.3
+rvm use 2.3.3 --default
+gem install bundler
 
 # Heroku Toolbelt
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
