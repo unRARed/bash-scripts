@@ -19,17 +19,18 @@ brew install bash-git-prompt
 echo -e "if [ -f \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\" ]; then\n    source \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\"\nfi" >> ~/.bash_profile
 
 
-# Ruby on Rails
+# Ruby
 echo "gem: --no-document" >> ~/.gemrc
 curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
-rvm install 2.3.1
-rvm use 2.3.1 --default
+rvm install 2.3.3
+rvm use 2.3.3 --default
+gem install bundler
 
 # Node Version Manager
 curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash
 source ~/.bashrc
-nvm install 4.5.0
-nvm alias default v4.5.0
+nvm install 7.3.0
+nvm alias default v7.3.0
 
 # Postrgresql Database (for Rails on Heroku)
 brew install postgresql
