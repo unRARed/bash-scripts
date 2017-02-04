@@ -1,5 +1,5 @@
 # OSX pre-reqs
-sudo xcodebuild -license
+sudo xcodebuild -license accept
 xcode-select --install
 
 # Homebrew
