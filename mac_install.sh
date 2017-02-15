@@ -18,6 +18,12 @@ echo -e "if [ -f `brew --prefix`/etc/bash_completion ]; then\n    . `brew --pref
 brew install bash-git-prompt
 echo -e "if [ -f \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\" ]; then\n    source \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\"\nfi" >> ~/.bash_profile
 
+# Allow writing to NTFS drives
+# Example: sudo /usr/local/bin/ntfs-3g /dev/disk1s1 /Volumes/NTFS -olocal -oallow_other
+# sub /dev/disk1s1 with your disk (find it with diskutil list)
+brew cask install osxfuse
+brew install homebrew/fuse/ntfs-3g
+sudo mkdir /Volumes/NTFS
 
 # Ruby
 echo "gem: --no-document" >> ~/.gemrc
@@ -37,6 +43,7 @@ brew install postgresql
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 
+# Sublime Text 3
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 brew cask install sublime-text
