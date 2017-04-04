@@ -48,4 +48,7 @@ brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 brew cask install sublime-text
 
+# android SDK
+brew cask install android-sdk
+
 source ~/.bash_profile
