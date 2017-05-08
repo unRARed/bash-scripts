@@ -10,8 +10,7 @@ brew doctor
 brew install git bash-completion # Note, the OSX pre-installed Git will not work with bash-completion
 git config --global user.name "Ryan Richardson"
 git config --global user.email "ryananthonyrichardson@gmail.com"
-git config --global color.ui true
-git config --global alias.hist "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+source config/git.sh
 echo -e "if [ -f `brew --prefix`/etc/bash_completion ]; then\n    . `brew --prefix`/etc/bash_completion\nfi" >> ~/.bash_profile
 
 # git-aware bash prompt
