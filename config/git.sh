@@ -1,6 +1,12 @@
 ##!/usr/bin/env bash
 
-git config --global color.ui true
+git config --global color.ui branch
+git config --global color.ui diff
+git config --global color.ui grep
+git config --global color.ui interactive
+git config --global color.ui showbranch
+git config --global color.ui status
+git config --global color.ui auto
 git config --global merge.ff false
 git config --global pull.ff only
 git config --global alias.co checkout
