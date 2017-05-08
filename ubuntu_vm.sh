@@ -41,8 +41,7 @@ echo "Installing Git"
 sudo apt-get install git -y
 git config --global user.email $email_address
 git config --global user.name $full_name
-git config --global color.ui true
-git config --global alias.hist "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+source config/git.sh
 
 clear
 echo "Installing and enabling multi-cast"
