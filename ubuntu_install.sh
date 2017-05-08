@@ -25,9 +25,7 @@ sudo apt-get install build-essential
 sudo apt-get install git
 git config --global user.email $GIT_EMAIL
 git config --global user.name $GIT_USER_NAME
-git config --global color.ui true
-git config --global alias.hist "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-git config --global core.editor "atom"
+source config/git.sh
 
 # NVM: node-version manager and node
 curl https://raw.githubusercontent.com/creationix/nvm/v0.5.1/install.sh | sh
