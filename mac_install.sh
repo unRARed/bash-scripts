@@ -24,6 +24,12 @@ brew cask install osxfuse
 brew install homebrew/fuse/ntfs-3g
 sudo mkdir /Volumes/NTFS
 
+# Docker
+brew install docker
+brew install boot2docker
+# start now and at login... (CAVEAT - cannot run this command in tmux)
+brew services start boot2docker
+
 # Ruby
 echo "gem: --no-document" >> ~/.gemrc
 curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
