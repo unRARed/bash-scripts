@@ -24,9 +24,12 @@ brew cask install osxfuse
 brew install homebrew/fuse/ntfs-3g
 sudo mkdir /Volumes/NTFS
 
-# Docker
+# Docker (boot2docker CI is already deprecated...)
 brew install docker
 brew install boot2docker
+boot2docker init
+boot2docker init up
+eval "$(boot2docker shellinit)"
 # start now and at login... (CAVEAT - cannot run this command in tmux)
 brew services start boot2docker
 
