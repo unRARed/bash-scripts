@@ -16,3 +16,6 @@ git config --global alias.st status
 git config --global alias.prune "remote prune origin"
 git config --global alias.nuke "push origin --delete"
 git config --global alias.lg "log --graph --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+cp .git_pr.sh ~/
+echo 'source ~/.git_pr.sh' >> ~/.bashrc
+source ~/.git_pr.sh
