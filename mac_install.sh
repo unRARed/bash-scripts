@@ -2,6 +2,9 @@
 sudo xcodebuild -license accept
 xcode-select --install
 
+# Show hidden files
+defaults write com.apple.finder AppleShowAllFiles YES
+
 # Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
