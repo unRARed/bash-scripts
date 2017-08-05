@@ -41,6 +41,7 @@ brew install pyenv
 pyenv install 3.5.3
 pyenv global 3.5.3
 echo 'if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi' >> ~/.bashrc
+source ~/.bashrc
 
 # Ruby
 echo "gem: --no-document" >> ~/.gemrc
