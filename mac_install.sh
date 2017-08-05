@@ -70,4 +70,16 @@ brew cask install sublime-text
 brew cask install java7
 brew cask install android-platform-tools
 
+# Mission Pinball Framework
+wget https://mpf.kantert.net/mpf_mac_frameworks.zip
+unzip mpf_mac_frameworks.zip
+sudo mv Frameworks/* /Library/Frameworks/
+rm -Rf Frameworks
+rm -Rf __MACOSX
+rm -Rf ReadMe.txt
+rm -Rf License.txt
+rm -Rf mpf_mac_frameworks.zip
+pip3 install pip setuptools cython==0.24.1 --upgrade
+pip3 install mpf mpf-mc mpf-monitor
+
 source ~/.bash_profile
