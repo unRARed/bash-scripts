@@ -36,6 +36,12 @@ eval "$(boot2docker shellinit)"
 # start now and at login... (CAVEAT - cannot run this command in tmux)
 brew services start boot2docker
 
+# Python
+brew install pyenv
+pyenv install 3.5.3
+pyenv global 3.5.3
+echo 'if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi' >> ~/.bashrc
+
 # Ruby
 echo "gem: --no-document" >> ~/.gemrc
 curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
