@@ -5,6 +5,10 @@ xcode-select --install
 # Show hidden files
 defaults write com.apple.finder AppleShowAllFiles YES
 
+# set keyrepeat (Sierra/High Sierra)
+defaults write NSGlobalDomain InitialKeyRepeat -int 20
+defaults write NSGlobalDomain KeyRepeat -int 1
+
 # Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
@@ -26,15 +30,6 @@ echo -e "if [ -f \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\" ]; 
 brew cask install osxfuse
 brew install homebrew/fuse/ntfs-3g
 sudo mkdir /Volumes/NTFS
-
-# Docker (boot2docker CI is already deprecated...)
-brew install docker
-brew install boot2docker
-boot2docker init
-boot2docker init up
-eval "$(boot2docker shellinit)"
-# start now and at login... (CAVEAT - cannot run this command in tmux)
-brew services start boot2docker
 
 # Python
 brew install pyenv
