@@ -51,10 +51,9 @@ source ~/.bashrc
 nvm install 7.3.0
 nvm alias default v7.3.0
 
-# Postrgresql Database (for Rails on Heroku)
+# Postrgresql Database (v10 as of Oct. 17)
 brew install postgresql
-ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+brew services start postgresql
 
 # Sublime Text 3
 brew install caskroom/cask/brew-cask
