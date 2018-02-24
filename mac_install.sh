@@ -54,6 +54,7 @@ nvm alias default v7.3.0
 # Postrgresql Database (v10 as of Oct. 17)
 brew install postgresql
 brew services start postgresql
+echo "rm /usr/local/var/postgres/postmaster.pid" >> ~/.bashrc # fix the server running locally and accepting connections on Unix domain socket "/tmp/.s.PGSQL.5432" bullshit
 
 # Sublime Text 3
 brew install caskroom/cask/brew-cask
