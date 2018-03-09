@@ -13,6 +13,9 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
 
+# Various generic commandline utils
+brew install wget
+
 # Git and bash/git completion
 brew install git bash-completion # Note, the OSX pre-installed Git will not work with bash-completion
 git config --global user.name "Ryan Richardson"
