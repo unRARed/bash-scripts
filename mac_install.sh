@@ -44,8 +44,8 @@ source ~/.bashrc
 # Ruby
 echo "gem: --no-document" >> ~/.gemrc
 curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
-rvm install 2.3.3
-rvm use 2.3.3 --default
+rvm install 2.5.0
+rvm use 2.5.0 --default
 gem install bundler
 
 # Node Version Manager
@@ -57,7 +57,8 @@ nvm alias default v7.3.0
 # Postrgresql Database (v10 as of Oct. 17)
 brew install postgresql
 brew services start postgresql
-echo "rm /usr/local/var/postgres/postmaster.pid" >> ~/.bashrc # fix the server running locally and accepting connections on Unix domain socket "/tmp/.s.PGSQL.5432" bullshit
+# echo "rm /usr/local/var/postgres/postmaster.pid" >> ~/.bashrc # fix the server running locally and accepting connections on Unix domain socket "/tmp/.s.PGSQL.5432" bullshit
+# ^ need IF exists conditional here...
 
 # Sublime Text 3
 brew install caskroom/cask/brew-cask
