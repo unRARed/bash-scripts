@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # OSX pre-reqs
 sudo xcodebuild -license accept
 xcode-select --install
