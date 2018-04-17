@@ -1,4 +1,4 @@
-##!/usr/bin/env bash
+#!/bin/bash
 
 git config --global color.branch auto
 git config --global color.diff auto

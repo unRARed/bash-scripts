@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Ubuntu 16.04 for development.
 
 # Prompt user for installation information
@@ -27,6 +28,9 @@ git config --global user.email $GIT_EMAIL
 git config --global user.name $GIT_USER_NAME
 source config/git.sh
 
+# Make caps_lock be escape
+source config/caps_lock.sh
+
 # NVM: node-version manager and node
 curl https://raw.githubusercontent.com/creationix/nvm/v0.5.1/install.sh | sh
 echo "export NVM_DIR=~/.nvm" >> ~/.bashrc
@@ -42,8 +46,8 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc # this doesn't always work
-rvm install 2.3.3
-rvm use 2.3.3 --default
+rvm install 2.5.0
+rvm use 2.5.0 --default
 gem install bundler
 
 # Heroku Toolbelt
