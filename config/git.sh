@@ -18,6 +18,6 @@ git config --global alias.nuke "push origin --delete"
 # :groom -> Removes all local branches that have been fully merged
 git config --global alias.groom "branch --merged master | grep -v 'master$' | xargs git branch -d"
 git config --global alias.lg "log --graph --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
-cp .git_pr.sh ~/
+cp config/.git_pr.sh ~/
 echo 'source ~/.git_pr.sh' >> ~/.bashrc
 source ~/.git_pr.sh

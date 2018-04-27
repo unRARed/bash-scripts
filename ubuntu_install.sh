@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 # Ubuntu 16.04 for development.
 
@@ -17,7 +17,7 @@ read -p "Git User Name: " GIT_USER_NAME
 sudo apt-get update
 
 # Dependencies
-sudo apt-get install curl -y
+sudo apt-get install tmux curl -y
 
 # Main Dev Libraries
 sudo apt-get install build-essential
@@ -30,6 +30,15 @@ source config/git.sh
 
 # Make caps_lock be escape
 source config/caps_lock.sh
+
+# Pyenv (python)
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+pyenv install 3.5.3
+pyenv global 3.5.3
 
 # NVM: node-version manager and node
 curl https://raw.githubusercontent.com/creationix/nvm/v0.5.1/install.sh | sh
@@ -56,3 +65,8 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 # Postgres
 sudo apt-get install postgresql postgresql-contrib libpq-dev # libpq-dev needed for Ruby PG Gem
 sudo -u postgres createuser --superuser $USER #adds current user to PG
+
+# Mission Pinball dependencies
+pip install kivy
+pip install setuptools cython==0.25.2 --upgrade
+pip install mpf mpf-mc mpf-monitor --pre
