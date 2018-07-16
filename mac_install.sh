@@ -29,6 +29,12 @@ echo -e "if [ -f `brew --prefix`/etc/bash_completion ]; then\n    . `brew --pref
 brew install bash-git-prompt
 echo -e "if [ -f \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\" ]; then\n    source \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\"\nfi" >> ~/.bash_profile
 
+# Docker
+brew install docker
+brew install docker-compose
+# "starter", tool to examine repo and bootstrap Dockerfile
+curl -sSL https://raw.githubusercontent.com/cloud66/starter/master/install.sh | bash
+
 # Allow writing to NTFS drives
 # Example: sudo /usr/local/bin/ntfs-3g /dev/disk1s1 /Volumes/NTFS -olocal -oallow_other
 # sub /dev/disk1s1 with your disk (find it with diskutil list)
