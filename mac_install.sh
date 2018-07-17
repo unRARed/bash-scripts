@@ -52,15 +52,15 @@ source ~/.bashrc
 # Ruby
 echo "gem: --no-document" >> ~/.gemrc
 curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
-rvm install 2.5.0
-rvm use 2.5.0 --default
+rvm install 2.5.1
+rvm use 2.5.1 --default
 gem install bundler
 
 # Node Version Manager
 curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash
 source ~/.bashrc
-nvm install 7.3.0
-nvm alias default v7.3.0
+nvm install 10.6.0
+nvm alias default v10.6.0
 
 # Postrgresql Database (v10 as of Oct. 17)
 brew install postgresql
