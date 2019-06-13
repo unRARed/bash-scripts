@@ -3,6 +3,7 @@
 # OSX pre-reqs
 sudo xcodebuild -license accept
 xcode-select --install
+/Applications/Xcode.app/Contents/MacOS/Xcode -installComponents
 
 # Show hidden files
 defaults write com.apple.finder AppleShowAllFiles YES
@@ -29,6 +30,9 @@ echo -e "if [ -f `brew --prefix`/etc/bash_completion ]; then\n    . `brew --pref
 brew install bash-git-prompt
 echo -e "if [ -f \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\" ]; then\n    source \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\"\nfi" >> ~/.bash_profile
 
+# Mac-Vim (supposed to be faster than default os-provided version)
+brew install macvim --with-lua --HEAD
+
 # Docker
 brew install docker
 brew install docker-compose
@@ -44,23 +48,23 @@ sudo mkdir /Volumes/NTFS
 
 # Python
 brew install pyenv
-pyenv install 3.5.3
-pyenv global 3.5.3
+pyenv install 1.2.12
+pyenv global 1.2.12
 echo 'if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi' >> ~/.bashrc
 source ~/.bashrc
 
 # Ruby
 echo "gem: --no-document" >> ~/.gemrc
 curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
-rvm install 2.5.1
-rvm use 2.5.1 --default
+rvm install 2.6.1
+rvm use 2.6.1 --default
 gem install bundler
 
 # Node Version Manager
 curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash
 source ~/.bashrc
-nvm install 10.6.0
-nvm alias default v10.6.0
+nvm install 12.4.0
+nvm alias default v12.4.0
 
 # Postrgresql Database (v10 as of Oct. 17)
 brew install postgresql
