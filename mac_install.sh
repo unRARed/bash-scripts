@@ -31,7 +31,8 @@ brew install bash-git-prompt
 echo -e "if [ -f \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\" ]; then\n    source \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\"\nfi" >> ~/.bash_profile
 
 # Mac-Vim (supposed to be faster than default os-provided version)
-brew install macvim --with-lua --HEAD
+brew install macvim
+brew install tmux
 
 # Docker
 brew install docker
@@ -50,27 +51,25 @@ sudo mkdir /Volumes/NTFS
 brew install pyenv
 pyenv install 1.2.12
 pyenv global 1.2.12
-echo 'if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi' >> ~/.bashrc
-source ~/.bashrc
+echo 'if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi' >> ~/.bash_profile
+source ~/.bash_profile
 
 # Ruby
 echo "gem: --no-document" >> ~/.gemrc
-curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
+\curl -sSL https://get.rvm.io | bash -s stable --auto-dotfiles
 rvm install 2.6.1
 rvm use 2.6.1 --default
 gem install bundler
 
 # Node Version Manager
 curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash
-source ~/.bashrc
+source ~/.bash_profile
 nvm install 12.4.0
 nvm alias default v12.4.0
 
 # Postrgresql Database (v10 as of Oct. 17)
 brew install postgresql
 brew services start postgresql
-# echo "rm /usr/local/var/postgres/postmaster.pid" >> ~/.bashrc # fix the server running locally and accepting connections on Unix domain socket "/tmp/.s.PGSQL.5432" bullshit
-# ^ need IF exists conditional here...
 
 # Sublime Text 3
 brew install caskroom/cask/brew-cask
