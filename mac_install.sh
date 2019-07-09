@@ -12,6 +12,9 @@ defaults write com.apple.finder AppleShowAllFiles YES
 defaults write NSGlobalDomain InitialKeyRepeat -int 20
 defaults write NSGlobalDomain KeyRepeat -int 1
 
+# speed up dock animation
+defaults write com.apple.dock autohide-time-modifier -float 0.25;killall Dock
+
 # Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
