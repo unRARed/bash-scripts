@@ -15,6 +15,9 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 # speed up dock animation
 defaults write com.apple.dock autohide-time-modifier -float 0.25;killall Dock
 
+# speed up window animation
+defaults write -g NSWindowResizeTime -float 0.003
+
 # Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
