@@ -86,6 +86,12 @@ brew cask install sublime-text
 brew cask install java7
 brew cask install android-platform-tools
 
+# Save MP3 files from YouTube URLs
+# USAGE: youtube-dl --extract-audio --audio-format mp3 YOUTUBE_URL
+brew install gcc
+brew install ffmpeg
+brew install youtube-dl
+
 # Mission Pinball Framework
 wget https://mpf.kantert.net/mpf_mac_frameworks.zip
 unzip mpf_mac_frameworks.zip
