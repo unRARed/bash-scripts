@@ -92,6 +92,14 @@ brew install gcc
 brew install ffmpeg
 brew install youtube-dl
 
+# Flutter DEV
+git clone -b beta https://github.com/flutter/flutter.git
+export PATH=$PWD/flutter/bin:$PATH
+flutter doctor
+flutter doctor --android-licenses
+sudo gem install cocoapods
+rm -Rf flutter
+
 # Mission Pinball Framework
 wget https://mpf.kantert.net/mpf_mac_frameworks.zip
 unzip mpf_mac_frameworks.zip
