@@ -1,20 +1,8 @@
-!/bin/bash
-
-# Ubuntu 16.04 for development.
-
-# Prompt user for installation information
-while [ -z "$GIT_EMAIL" ]
-do
-	read -p "Git Email: " email
-	case $email in
-		*[@]* ) GIT_EMAIL=$email;;
-		* ) echo "Please enter a valid email address.";;
-	esac
-done
-
-read -p "Git User Name: " GIT_USER_NAME
+#!/usr/bin/env bash
 
 sudo apt-get update
+sudo apt-get install git
+./shared/_git.sh
 
 # Dependencies
 sudo apt-get install tmux curl -y
@@ -22,14 +10,8 @@ sudo apt-get install tmux curl -y
 # Main Dev Libraries
 sudo apt-get install build-essential
 
-# Git
-sudo apt-get install git
-git config --global user.email $GIT_EMAIL
-git config --global user.name $GIT_USER_NAME
-source config/git.sh
-
 # Make caps_lock be escape
-source config/caps_lock.sh
+./systems/Ubuntu/_caps_lock.sh
 
 # Pyenv (python)
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
@@ -70,3 +52,15 @@ sudo -u postgres createuser --superuser $USER #adds current user to PG
 pip install kivy
 pip install setuptools cython==0.25.2 --upgrade
 pip install mpf mpf-mc mpf-monitor --pre
+
+# Spotify
+sudo echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
+sudo apt-get update && sudo apt-get install spotify-client
+
+# XBMC
+sudo apt-get install python-software-properties pkg-config
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:team-xbmc/unstable
+sudo apt-get update
+sudo apt-get install xbmc

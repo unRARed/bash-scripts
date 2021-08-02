@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+read -r -p "Install [...CHANGE ME...]? [y/N] " response
+if [[ "$response" =~ $YES ]]
+then
+  [...CHANGE ME...]
+fi
