@@ -51,6 +51,12 @@ then
   brew install clamav
 fi
 
+read -r -p "Install the Signal Messenger app? [y/N] " response
+if [[ "$response" =~ $YES ]]
+then
+  brew install --cask signal
+fi
+
 read -r -p "Install Karabiner Elements for key re-mapping? [y/N] " response
 if [[ "$response" =~ $YES ]]
 then
