@@ -11,7 +11,8 @@ sudo apt-get install tmux curl -y
 sudo apt-get install build-essential
 
 # Make caps_lock be escape
-./systems/Ubuntu/_caps_lock.sh
+echo "setxkbmap -option" >> ~/.bashrc
+echo "setxkbmap -option caps:escape" >> ~/.bashrc
 
 # Pyenv (python)
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
