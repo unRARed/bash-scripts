@@ -21,9 +21,7 @@ git config --global color.status auto
 git config --global color.ui auto
 git config --global merge.ff false
 git config --global pull.ff only
-git config --global commit.gpgsign true
 git config --global tag.sort "-taggerdate"
-git config --global gpg.program "gpg"
 git lfs install --system
 
 read -r -p "Install command-line aliases for git? [y/N] " response
