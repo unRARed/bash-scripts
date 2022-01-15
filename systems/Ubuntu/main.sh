@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 sudo apt-get update
-sudo apt-get install git
+sudo apt-get remove vim-tiny
+sudo apt-get install git vim-nox
 ./shared/_git.sh
 
 # Dependencies
