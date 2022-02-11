@@ -22,6 +22,12 @@ brew services start postgresql
 ./shared/_rvm.sh
 ./shared/_git.sh
 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm install --lts
+
 # Allow upgrading package.json deps to latest via `ncu -u`
 # (akin to bundle update)
 yarn global add npm-check-updates
@@ -110,7 +116,7 @@ read -r -p "Install Github Command-line tools? [y/N] " response
 if [[ "$response" =~ $YES ]]
 then
   # Github CLI
-  brew install github/gh/gh
+  brew install gh
 fi
 
 read -r -p "Install Microsoft Azure Command-line tools? [y/N] " response
@@ -137,7 +143,7 @@ then
   # Example: sudo /usr/local/bin/ntfs-3g \
   #               /dev/disk1s1 /Volumes/NTFS -olocal -oallow_other
   # sub /dev/disk1s1 with your disk (find it with diskutil list)
-  brew cask install osxfuse
+  brew install macfuse
   brew install homebrew/fuse/ntfs-3g
   sudo mkdir /Volumes/NTFS
 fi
@@ -146,7 +152,7 @@ read -r -p "Install DBeaver for database debugging? [y/N] " response
 if [[ "$response" =~ $YES ]]
 then
   # dbeaver depends on java
-  brew install --cask adoptopenjdk
+  brew install --cask temurin
   brew install --cask dbeaver-community
 fi
 
