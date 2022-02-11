@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+xcode-select --install
+
 ## Homebrew and various dependencies
 echo "Installing Homebrew...\n"
-/usr/bin/ruby -e \
-	"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 brew install zsh zsh-completions nodejs gpg git git-lfs imagemagick yarn pinentry-mac gcc dnsmasq git-lfs
 brew tap homebrew/cask
 brew install --cask chromedriver
