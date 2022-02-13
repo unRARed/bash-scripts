@@ -35,6 +35,9 @@ yarn global add npm-check-updates
 ## git-aware terminal prompt
 npm install -g spaceship-prompt
 
+# React native
+yarn global add pod-install
+
 ###############################
 ## Recommended Optional Apps ##
 ###############################
