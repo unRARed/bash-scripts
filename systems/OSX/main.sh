@@ -37,6 +37,7 @@ npm install -g spaceship-prompt
 
 # React native
 yarn global add pod-install
+brew install cocoapods
 
 ###############################
 ## Recommended Optional Apps ##
