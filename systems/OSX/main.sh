@@ -8,7 +8,7 @@ echo "Installing Homebrew...\n"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-brew install zsh zsh-completions nodejs gpg git git-lfs imagemagick yarn pinentry-mac gcc dnsmasq git-lfs
+brew install zsh zsh-completions nodejs gpg git git-lfs imagemagick yarn pinentry-mac gcc dnsmasq git-lfs rg
 brew tap homebrew/cask
 brew install --cask chromedriver
 
